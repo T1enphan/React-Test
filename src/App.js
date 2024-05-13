@@ -21,9 +21,9 @@ function App(props) {
     //   </header>
     // </div>
     <div>
-      <Header></Header>
+      {/* <Header></Header> */}
       {props.children}
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </div>
   );
 }
