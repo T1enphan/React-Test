@@ -1,10 +1,9 @@
 function LogoutBtn(props) {
-    return (
-        <>
-            <button onClick={props.onClick}>
-                Logout
-            </button>
-        </>
-    )
+  return (
+    <>
+      <h1>Đăng xuất đi</h1>
+      <button onClick={props.onClick}>Logout</button>
+    </>
+  );
 }
-export default LogoutBtn
+export default LogoutBtn;

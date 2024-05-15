@@ -10,6 +10,8 @@ import Account from "./Account/Account";
 import Home from "./HomePage/Home";
 import Vd1 from "./B11/Vd1";
 import ActionLogin from "./B11/login";
+import Vd2 from "./B11/Vd2";
+import Test from "./B11/warning";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -22,7 +24,12 @@ root.render(
           <Route path="/account" element={<Account></Account>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/vi1" element={<Vd1></Vd1>}></Route>
-          <Route path="/vi2" element={<ActionLogin></ActionLogin>}></Route>
+          <Route
+            path="/vd-loginbtn"
+            element={<ActionLogin></ActionLogin>}
+          ></Route>
+          <Route path="/vi3" element={<Vd2></Vd2>}></Route>
+          <Route path="/vi4" element={<Test></Test>}></Route>
         </Routes>
       </App>
     </Router>
