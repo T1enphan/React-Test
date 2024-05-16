@@ -1,16 +1,43 @@
-import Content from "./Component/Content";
-import Footer from "./Component/Footer";
-import Head from "./Component/Head";
-import Header from "./Component/Header";
-import Slider from "./Component/Slider";
+
 
 function Tien(props) {
+  console.log(props.arr);
+  console.log(props.obj);
+  // function renderDataArr(){
+  //   let {arr} = props
+  //   if(arr.length>0){
+  //     return arr.map((value, key)=>{
+  //       return(<>
+  //       <li key={key}>
+  //         {value}
+  //       </li>
+  //       </>)
+  //     })
+  //   }
+  // }
+  function renderDataObj(){
+    let {obj} = props;
+    if(Object.keys(obj).length>0){
+      return Object.keys(obj).map((key) => {
+        return(
+        <li key={key}>
+          {obj[key]}
+        </li>)
+      })
+    }else{
+      return null;
+    }
+  }
+  
   return (
     <>
-      <Header></Header>
-      <Slider></Slider>
-      <Content></Content>
-      <Footer></Footer>
+     <p>
+      MAP theo arr va obj
+     </p>
+     <ul>
+      {/* {renderDataArr()} */}
+        {renderDataObj()}
+     </ul>
     </>
   );
 }
