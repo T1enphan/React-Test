@@ -15,6 +15,7 @@ import Test from "./B11/warning";
 import NumberList from "./B11/NumberList";
 import B from "./B11/B";
 import A from "./B11/A";
+import FormLogin from "./Login/formLogin";
 const arr = [1, 2, 3, 4, 5, 6, 7];
 const obj = {
   ten: "tien",
@@ -25,14 +26,15 @@ root.render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <Tien obj={obj} arr={arr}></Tien> */}
-    <A></A>
-    {/* <Router>
+    {/* <A></A> */}
+    <Router>
       <App>
         <Routes>
           <Route index path="/" element={<Home></Home>}></Route>
           <Route path="/account" element={<Account></Account>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/vi1" element={<Vd1></Vd1>}></Route>
+          <Route path="/form-login" element={<FormLogin></FormLogin>}></Route>
           <Route
             path="/vd-loginbtn"
             element={<ActionLogin></ActionLogin>}
@@ -42,7 +44,7 @@ root.render(
           <Route path="/vi5" element={<NumberList></NumberList>}></Route>
         </Routes>
       </App>
-    </Router> */}
+    </Router>
   </React.StrictMode>
 );
 
