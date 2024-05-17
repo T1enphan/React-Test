@@ -1,9 +1,8 @@
 // A.js
-import React from 'react';
-import B from './B';
+import React from "react";
+import B from "./B";
 
 function A() {
-    const a = [1,2,3,4]
   const data = [
     {
       id: 1,
@@ -18,8 +17,8 @@ function A() {
       website: "hildegard.org",
       company: {
         name: "Romaguera-Crona",
-        catchPhrase: "Multi-layered client-server neural-net", 
-      }
+        catchPhrase: "Multi-layered client-server neural-net",
+      },
     },
     {
       id: 2,
@@ -34,8 +33,8 @@ function A() {
       website: "anastasia.net",
       company: {
         name: "Deckow-Crist",
-        catchPhrase: "Proactive didactic contingency",  
-      }
+        catchPhrase: "Proactive didactic contingency",
+      },
     },
     {
       id: 3,
@@ -50,8 +49,8 @@ function A() {
       website: "ramiro.info",
       company: {
         name: "Romaguera-Jacobson",
-        catchPhrase: "Face to face bifurcated interface",  
-      }
+        catchPhrase: "Face to face bifurcated interface",
+      },
     },
     {
       id: 4,
@@ -60,14 +59,14 @@ function A() {
       email: "Julianne.OConner@kory.org",
       address: {
         street: "Hoeger Mall",
-        suite: "Apt. 692", 
+        suite: "Apt. 692",
       },
       phone: "493-170-9623 x156",
       website: "kale.biz",
       company: {
         name: "Robel-Corkery",
-        catchPhrase: "Multi-tiered zero tolerance productivity", 
-      }
+        catchPhrase: "Multi-tiered zero tolerance productivity",
+      },
     },
     {
       id: 5,
@@ -83,16 +82,31 @@ function A() {
       company: {
         name: "Keebler LLC",
         catchPhrase: "User-centric fault-tolerant solution",
-      }
+      },
     },
   ];
-
+  const data2 = {
+    id: 2,
+    name: "Ervin Howell",
+    username: "Antonette",
+    email: "Shanna@melissa.tv",
+    address: {
+      street: "Victor Plains",
+      suite: "Suite 879",
+    },
+    phone: "010-692-6593 x09125",
+    website: "anastasia.net",
+    company: {
+      name: "Deckow-Crist",
+      catchPhrase: "Proactive didactic contingency",
+    },
+  };
   return (
     <div>
       <h1>Component A</h1>
-      <B a={a} />
+      <B data={data} data2={data2} />
     </div>
   );
-};
+}
 
 export default A;
