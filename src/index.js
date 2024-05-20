@@ -16,6 +16,7 @@ import NumberList from "./B11/NumberList";
 import B from "./B11/B";
 import A from "./B11/A";
 import FormLogin from "./Login/formLogin";
+import FormRegister from "./Register/formRegister";
 const arr = [1, 2, 3, 4, 5, 6, 7];
 const obj = {
   ten: "tien",
@@ -42,6 +43,10 @@ root.render(
           <Route path="/vi3" element={<Vd2></Vd2>}></Route>
           <Route path="/vi4" element={<Test></Test>}></Route>
           <Route path="/vi5" element={<NumberList></NumberList>}></Route>
+          <Route
+            path="/form-register"
+            element={<FormRegister></FormRegister>}
+          ></Route>
         </Routes>
       </App>
     </Router>
