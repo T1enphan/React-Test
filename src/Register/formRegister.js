@@ -34,17 +34,18 @@ function FormRegister() {
 
   const handleFile = (e) => {
     const uploadFiles = e.target.files;
+    // setFiles(e.target.files);
     const fileArray = Array.from(uploadFiles);
     const validImageTypes = ["image/png", "image/jpg", "image/jpeg"];
 
     fileArray.forEach((file) => {
       if (!validImageTypes.includes(file.type)) {
-        alert("Invalid file type. Only PNG, JPG, and JPEG are allowed.");
+        alert("khong dung dinh dang");
         return;
       }
       const fileSizeMB = file.size / (1024 * 1024);
       if (fileSizeMB > 1) {
-        alert("file size exceeds 1MB");
+        alert("vuot qua 1MB roi");
         return;
       }
       console.log(`Name: ${file.name}`);
@@ -82,6 +83,10 @@ function FormRegister() {
     } else if (!isEmail(inputs.email)) {
       errorSubmit.email = "dinh dang email khong hop le";
       flag = false;
+    }
+    if(files.length == 0){
+      errorSubmit.avatar = "hay import anh vao";
+      flag=false;
     }
     if (inputs.pass == "") {
       errorSubmit.pass = "vui long nhap pass";
@@ -133,10 +138,8 @@ function FormRegister() {
         />
         <label>Avatar</label>
         <input
-          multiple
           type="file"
           name="avatar"
-          placeholder="Thêm ảnh đi yasir"
           value={inputs.avatar}
           onChange={handleFile}
         />
@@ -150,7 +153,7 @@ function FormRegister() {
         </select>
         <button type="submit">Click</button>
       </form>
-      {files.length > 0 && (
+      {/* {files.length > 0 && (
         <div>
           <h3>Uploaded Files</h3>
           <ul>
@@ -161,7 +164,7 @@ function FormRegister() {
             ))}
           </ul>
         </div>
-      )}
+      )} */}
     </>
   );
 }
