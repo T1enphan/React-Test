@@ -18,6 +18,10 @@ import A from "./B11/A";
 import FormLogin from "./Login/formLogin";
 import FormRegister from "./Register/formRegister";
 import GetData from "./Data/GetData";
+import Demo from "./Data/PostRequest";
+import DelDemo from "./Data/DelRequest";
+import GetApi from "./Data/A";
+import ShowApi from "./Data/B";
 const arr = [1, 2, 3, 4, 5, 6, 7];
 const obj = {
   ten: "tien",
@@ -45,6 +49,10 @@ root.render(
           <Route path="/vi4" element={<Test></Test>}></Route>
           <Route path="/vi5" element={<NumberList></NumberList>}></Route>
           <Route path="/getData" element={<GetData></GetData>}></Route>
+          <Route path="/post-request" element={<Demo></Demo>}></Route>
+          <Route path="/del-request" element={<DelDemo></DelDemo>}></Route>
+          <Route path="/truyen-api" element={<GetApi></GetApi>}></Route>
+          {/* <Route path="/show-api-data" element={<ShowApi></ShowApi>}></Route> */}
           <Route
             path="/form-register"
             element={<FormRegister></FormRegister>}
